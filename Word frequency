@@ -1,0 +1,27 @@
+file=open('para.txt','r')
+
+frequency = {}
+
+for line in file:
+
+  wordlist = line.split()
+  for word in wordlist:
+   if word in frequency: frequency[word]+= 1
+   else: frequency[word]=1
+
+
+max=1
+
+
+for key in frequency:
+ if frequency[key]>max : 
+  max=frequency[key]
+  str=key 
+  
+print "word with maximum frequency in the paragraph is '" + str +"'.It's frequency is " ,max
+
+'''
+  The Paragraph
+
+Until a man is twenty-five, he still thinks, every so often, that under the right circumstances he could be the baddest motherfucker in the world. If I moved to a martial-arts monastery in China and studied real hard for ten years. If my family was wiped out by Colombian drug dealers and I swore myself to revenge. If I got a fatal disease, had one year to live, and devoted it to wiping out street crime. If I just dropped out and devoted my life to being bad. Hiro used to feel this way, too, but then he ran into Raven. In a way, this was liberating. He no longer has to worry about being the baddest motherfucker in the world. The position is taken.
+'''
